@@ -134,3 +134,9 @@ SCHOOL_TIME_ZONE=Asia/Jakarta
 ```
 
 Gunakan HTTPS, secret acak yang panjang, dan jangan commit file `.env` atau service role key. Untuk backup/restore database, lihat `server/BACKUP.md`.
+
+## Dokumentasi
+
+- Setup client dan Supabase: `docs/SETUP_CLIENT.md`
+- Panduan penggunaan: `docs/PANDUAN_PENGGUNA.md`
+- Skenario presentasi: `docs/SKENARIO_PRESENTASI.md`
