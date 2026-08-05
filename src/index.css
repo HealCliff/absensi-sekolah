@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+  --color-paper: #f8fafc;
+  --color-ink: #1e293b;
+  --color-navy: #1e3a8a;
+  --color-steel: #64748b;
+  --color-accent: #dbeafe;
+  --color-signal: #b45309;
+}
+
+:root {
+  color: #1e293b;
+  background: #f8fafc;
+  font-synthesis: none;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  min-width: 320px;
+  font-family: "Inter", ui-sans-serif, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+button, input, select { font: inherit; }
+::selection { color: #fff; background: #1e3a8a; }
+
+::-webkit-scrollbar { width: 7px; height: 7px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #9aa6b8; border-radius: 2px; }
+::-webkit-scrollbar-thumb:hover { background: #66758d; }
+
+@keyframes reveal {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes modal-in {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in-up { animation: reveal 180ms ease-out both; }
+.animate-fade-in { animation: reveal 140ms ease-out both; }
+.animate-modal-in { animation: modal-in 180ms ease-out both; }
+
+/* Tables are intentionally dense and document-like. */
+table { border-collapse: collapse; }
+thead { background: #f8fafc; }
+.dark thead { background: rgb(31 41 55 / 0.5); }
+
+/* --- Mode cetak --- */
+@media print {
+  aside, header { display: none !important; }
+  .lg\:pl-64, .pl-64 { padding-left: 0 !important; }
+  body { background: #fff !important; }
+  * { box-shadow: none !important; }
+}

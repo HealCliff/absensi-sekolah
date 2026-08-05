@@ -1,0 +1,51 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+testsprite_tests\tmp\config.json
+
+# Environment and secrets
+.env
+.env.*
+!.env.example
+!**/.env.example
+*.key
+*.pem
+*.crt
+
+# Database backups
+**/backups/
+*.dump
+
+# Private/generated TestSprite artifacts
+testsprite_tests/tmp/
+testsprite_tests/
+
+# Internal project and tool configuration
+opencode.json
+HANDOFF.md
+Product_Specification_Doc.md
+PRD_Frontend_Absensi_Guru.md
+prd.md
+server/scripts/seed-password.js
