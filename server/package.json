@@ -9,6 +9,7 @@
     "start": "node src/index.js",
     "test": "node --test",
     "test:integration": "node --test test/integration.test.js",
+    "setup:passwords": "node scripts/initialize-passwords.js",
     "backup:db": "node scripts/backup-database.js",
     "restore:db": "node scripts/restore-database.js"
   },

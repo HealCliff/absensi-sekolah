@@ -45,7 +45,15 @@ Jalankan migration secara berurutan di Supabase SQL Editor:
 3. `supabase/migrations/0003_index_performa.sql`
 4. `supabase/migrations/0004_login_security.sql`
 
-Migration kedua membuat pengaturan jam absensi. Migration ketiga menambahkan index performa.
+Migration kedua membuat pengaturan jam absensi. Migration ketiga menambahkan index performa. Migration keempat menambahkan keamanan lockout login.
+
+Setelah migration selesai, buat password akun pada Supabase client dengan menjalankan dari folder `server`:
+
+```powershell
+npm run setup:passwords
+```
+
+Script akan meminta password baru untuk tiga akun awal. Password minimal 8 karakter dan tidak disimpan di repository.
 
 ## Menjalankan Aplikasi
 
@@ -84,13 +92,13 @@ Frontend memakai proxy `/api` ke backend `http://localhost:4000`.
 
 ## Akun Demo
 
-| Role | NIK | Password |
+| Role | NIK |
 | --- | --- | --- |
-| Guru | `1234567890123456` | `guru12345` |
-| Tata Usaha | `9876543210987654` | `tu12345` |
-| Kepala Sekolah | `1111222233334444` | `kepsek12345` |
+| Guru | `1234567890123456` |
+| Tata Usaha | `9876543210987654` |
+| Kepala Sekolah | `1111222233334444` |
 
-Ganti password demo sebelum deployment production.
+Password akun ditentukan sendiri saat menjalankan `npm run setup:passwords`.
 
 ## Testing dan Build
 
